@@ -26,7 +26,7 @@ install_requires = [
     "grpcio-status >= 1.59.0, < 2.0.0",
     "proto-plus >= 1.22.3, < 2.0.0",
     "PyYAML >= 5.1, < 7.0",
-    "protobuf >= 4.25.0, < 5.0.0",
+    "protobuf >= 4.24.4, < 5.0.0",
 ]
 
 with open("README.rst", "r", encoding="utf-8") as readme_file:
