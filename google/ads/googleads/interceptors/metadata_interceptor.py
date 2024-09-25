@@ -23,7 +23,10 @@ login-customer-id values.
 # once the below issue is resolved, and the protobuf version is added to the
 # request user-agent directly by the google-api-core package:
 # https://github.com/googleapis/python-api-core/issues/416
-from importlib import metadata
+try:
+    from importlib import metadata
+except ImportError: # for Python<3.8
+    import importlib_metadata as metadata
 
 _PROTOBUF_VERSION = metadata.version("protobuf")
 

@@ -13,7 +13,12 @@
 # limitations under the License.
 """A client and common configurations for the Google Ads API."""
 
-from importlib import import_module, metadata
+from importlib import import_module
+try:
+    from importlib import metadata
+except ImportError: # for Python<3.8
+    import importlib_metadata as metadata
+
 import logging.config
 
 from google.api_core.gapic_v1.client_info import ClientInfo
